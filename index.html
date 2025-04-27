@@ -1,38 +1,12 @@
-<DOCTYPE! html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Page Image</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<div class="bg"></div>
-<h1>
-What's crappenin??
-</h1>
-<a href="https://www.nasa.gov/image-article/hubble-spies-cosmic-pillar-in-eagle-nebula/">Click to see a nebula!</a>
-<img src="./pic.jpg" alt= "this is a pic">
-
-<form id="myForm">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <input type="submit">
-</form>
-<h2>Submitted Data:</h2>
-<div id="displayData"></div>
-  <script>
-    const form = document.getElementById('myForm');
-    const displayData = document.getElementById('displayData');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); 
-
-      let formData = new FormData(form);
-      let output = '<ul>';
-
-      formData.forEach(function(value, key){
-          output += '<li>' + key + ': ' + value + '</li>';
-      });
-      output += '</ul>';
-      displayData.innerHTML = output;
-    });
-  </script>
-</body> 
+    <img src="pic.jpg" alt="cat in the flats image" class="full-page-image">
+</body>
 </html>
